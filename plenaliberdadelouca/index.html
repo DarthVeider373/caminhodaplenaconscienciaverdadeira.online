@@ -220,7 +220,7 @@
 </head>
 
 <body>
-  <div class="topStrip">SÓ HOJE, QUINTA-FEIRA, 8 DE JANEIRO</div>
+  <div class="topStrip" id="topStrip"></div>
 
   <main class="wrap">
     <section class="hero">
@@ -229,8 +229,16 @@
         PRA FAZER ELA JORRAR
       </h1>
 
+
+
+
       <vturb-smartplayer id="vid-6960463d0d8ded7c540670b5" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
       <script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/6960463d0d8ded7c540670b5/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+
+
+
+
 
       <div class="ratings" aria-label="Avaliações">
         <div class="stars">★★★★★</div>
@@ -259,6 +267,23 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const dias = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO'];
+      const meses = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
+
+
+      const hoje = new Date();
+      const texto = `SÓ HOJE, ${dias[hoje.getDay()]}, ${hoje.getDate()} DE ${meses[hoje.getMonth()]}`;
+
+
+      const el = document.getElementById('topStrip');
+      if (el) el.textContent = texto;
+    })();
+  </script>
+
+
 </body>
 
 </html>
